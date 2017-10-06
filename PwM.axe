@@ -1,0 +1,3 @@
+main:	pwm C.4,150,20	; send 20 pwm bursts out of pin 4
+	pause 20	; pause 20 ms
+	goto main	; loop back to star
