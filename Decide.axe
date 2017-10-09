@@ -1,0 +1,10 @@
+select case b1 
+case 1
+high 1 
+case 2,3
+low 1 
+case 4 to 6 
+high 2
+else
+low 2 
+endselect
