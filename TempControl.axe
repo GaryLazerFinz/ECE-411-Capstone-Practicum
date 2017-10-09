@@ -1,0 +1,26 @@
+main:	
+readadc 0,b1		; read value into b1 value is 0-255
+
+select case b1 
+case 0 to 50
+PWMOUT pin, period, duty cycles	; period is between 0-255 duty cycles is between 0-1023 not greater then 4x period
+case 51 to 100
+PWMOUT pin, period, duty cycles	; period is between 0-255 duty cycles is between 0-1023 not greater then 4x period
+case 101 to 150 
+PWMOUT pin, period, duty cycles	; period is between 0-255 duty cycles is between 0-1023 not greater then 4x period
+case 151 to 200 
+PWMOUT pin, period, duty cycles	; period is between 0-255 duty cycles is between 0-1023 not greater then 4x period
+case 201 to 255 
+PWMOUT pin, period, duty cycles	; period is between 0-255 duty cycles is between 0-1023 not greater then 4x period
+else
+flsh
+PWMOUT pin, OFF  ; turn the pwm off
+endselect
+
+goto main		; else loop back to start
+
+flsh:	high B.1		; switch on output B.1
+	pause 1000		; wait 1 second
+	low B.1			; switch off output B.1
+	pause 1000		; wait 1 second
+	goto main		; loop back to start
