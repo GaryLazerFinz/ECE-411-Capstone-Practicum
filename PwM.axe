@@ -1,4 +1,0 @@
-main:	PWMOUT pin, period, duty cycles	; period is between 0-255 duty cycles is between 0-1023 not greater then 4x period
-	PWMOUT pin, OFF  ; turn the pwm off
-	goto main	; loop back to start
-mm
