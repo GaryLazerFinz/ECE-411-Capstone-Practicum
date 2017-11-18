@@ -1,3 +1,4 @@
+// Initial variables
 int led = 0; // blink 'digital' pin 1 - AKA the built in red LED
 int sensor = 2; // temp sensor pin
 int Value= 0; 
