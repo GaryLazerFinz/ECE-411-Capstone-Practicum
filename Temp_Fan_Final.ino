@@ -25,19 +25,19 @@ voltage /= 1024.0;
 float temperatureC = (voltage - 0.5) * 100 ;
 
 //ramp up motor speed based on temperature
-if((temperatureC > 25) && (temperatureC < 30))
+if((temperatureC > 25) && (temperatureC <= 30))
 {
   analogWrite(motorPin,50);
 }
-else if((temperatureC > 30) && (temperatureC < 35))
+else if((temperatureC > 30) && (temperatureC <= 35))
 {
   analogWrite(motorPin,100);
 }
-else if((temperatureC > 35) && (temperatureC < 40))
+else if((temperatureC > 35) && (temperatureC <= 40))
 {
   analogWrite(motorPin,150);
 }
-else if((temperatureC > 40) && (temperatureC < 100))
+else if((temperatureC > 40) && (temperatureC < 200))
 {
   analogWrite(motorPin,250);
 }
